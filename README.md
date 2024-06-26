@@ -1,7 +1,7 @@
 # Chat_bot_RAG
-Is dynamick flask web aplication which use groq and my own build RAG module for PDF and WEB pages.
+It is a dynamic flask web application that uses groq and my own RAG module for PDF and WEB pages.
 
-in the aplication is also included Text2Speach and Speach2Text bud  as of now it doesnt work proprly.
+The app also includes Text2Speach and Speach2Text, but it doesn't work properly yet.
 
 # .ENV
 Should be put on the same level as compose.yaml
@@ -15,16 +15,16 @@ Should be put on the same level as compose.yaml
 # WHOLE APP IS IN DOCKER! 
 Firstly you need to download docker desktop for using this app
 
-# FUNCTIONALITIES
+# FEATURES
 1) Login system with sessions
-2) Genereting messages and saving them to db
-3) Recreating chat history
-4) Remembering previouse topic
-5) Extracting text from PDF and WEB pages
-6) Saving extracted text to db for every user separatly
-7) Vectorize the extracted content and save it to the db (also Vectorizer is stored in vectorizer.pkl for future use)
-8) Vectorize the prompt and via cosine similarity find closest index of paragraphs
-9) Find the paragraphs from returned index 
+2) Generating messages and storing them in db
+3) Restore chat history
+4) Remembering the previous topic
+5) Text extraction from PDF and WEB pages
+6) Storing extracted text in db for each user separately
+7) Vectorizing the extracted content and saving it to db (the vectorization is also saved to vectorizer.pkl file for future use)
+8) Vectorizing the prompt and using cosine similarity to find the nearest paragraph index
+9) Find the paragraphs from the returned index
 
 
 # HOW TO USE
