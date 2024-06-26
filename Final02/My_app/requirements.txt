@@ -1,0 +1,16 @@
+flask
+flask-login
+werkzeug
+wheel
+gensim
+scipy == 1.12
+numpy
+groq
+langchain
+deepgram-sdk
+flask_sqlalchemy
+psycopg2-binary
+PyPDF2
+Matplotlib
+bs4
+scikit-learn

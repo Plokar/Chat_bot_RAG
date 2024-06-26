@@ -1,0 +1,553 @@
+/* ///   OBECNÝ CSS   /// */
+body{
+    background-color: gray;
+}
+button{
+    background-color: rgba(31, 37, 46, 1);
+    width: 190px;
+    height: 55px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    border: none;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgb(71, 81, 95); 
+}
+ion-icon{
+    width: 50px;
+    height: 50px;
+}
+
+
+
+/* ///   SIDE BAR   /// */
+#side_bar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: rgba(30, 34, 40, 1);
+    color: white;
+    padding-top: 20px;
+    z-index: 0;
+}
+#dekorace{
+    z-index: 1;
+}
+#dekorace_1{
+    position: fixed;
+    bottom: -152px;
+    left: 7;
+    z-index: 1;
+    padding: auto;
+    margin: 0px;
+}
+#toggleButton{
+    position: fixed;
+    bottom: 230px;
+    z-index: 5;
+}
+#toggleButton_indicator{
+    position: fixed;
+    bottom: 242px;
+    left: 30px;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    border-radius: 80px;
+    z-index: 6;
+}
+#log_button{
+    position: fixed;
+    bottom: 160px;
+    z-index: 5;
+}
+#log_button_icon{
+    position: fixed;
+    bottom: 172px;
+    left: 30px;
+    width: 30px;
+    height: 30px;
+    z-index: 6;
+}
+#send_file_button{
+    position: fixed;
+    bottom: 90px;
+    z-index: 5;
+}
+#send_file_button_icon{
+    position: fixed;
+    bottom: 102px;
+    left: 30px;
+    width: 30px;
+    height: 30px;
+    z-index: 6;
+
+}
+#dev_chats_button{
+    position: fixed;
+    bottom: 20px;
+    z-index: 5;
+}
+#dev_chats_button_icon{
+    position: fixed;
+    bottom: 32px;
+    left: 30px;
+    width: 30px;
+    height: 30px;
+    z-index: 6;
+}
+.history_button{
+    position: relative;
+    top: 0px;
+    border-radius: 14;
+    background-color: rgb(44, 51, 61);
+    margin: 5px;
+    right: 0px;
+    z-index: 12;
+    cursor: pointer;
+}
+#historie{
+    position: fixed;
+    width: 250px;
+    height: 330px;
+    left: 0px;
+    top: 0px;
+    overflow: auto;
+    z-index: 4;
+}
+.delete_history{
+    position: relative;
+    top: 2px;
+    right: -8px;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+}
+/* ///   SEARCH BAR   /// */
+#search_bar{
+    position: fixed;
+    bottom: 0;
+    left: 250px;
+    width: calc(100% - 255px);
+    height: 85px;
+    background-color: rgba(54, 64, 77, 1);
+    color: white;
+    padding-top: 20px;
+    z-index: 0;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+#prompt_input{
+    position: fixed;
+    bottom: 10px;
+    left: 250px;
+    width: calc(100% - 350px);
+    height: 80px;
+    background-color: rgb(236, 234, 234);
+    color: black;
+    font-size: 20px;
+    border: none;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    padding-left: 20px;
+    z-index: 3;
+    resize: none;
+}
+#send_button{
+    position: fixed;
+    right: 15px;
+    bottom: 10px;
+    height: 85px;
+    width: 130px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    text-align: right;
+    z-index: 2;
+}
+#send_button_icon{
+    position: fixed;
+    right: 38px;
+    bottom: 34px;
+    width: 38px;
+    height: 38px;
+    z-index: 6;
+
+}
+#buttn_mikrofon_off{
+    position: fixed;
+    bottom: 14px;
+    left: 200px;
+    width: 75px;
+    height: 75px;
+    background-color: rgba(54, 64, 77, 1);
+    border-radius: 70px;
+    z-index: 6;
+}
+#mikrofon_off{
+    position: fixed;
+    bottom: 14px;
+    left: 200px;
+    width: 75px;
+    height: 75px;
+    background-color: rgba(54, 64, 77, 1);
+    border-radius: 70px;
+    z-index: 6;
+}
+#mikrofon_on{
+    position: fixed;
+    bottom: 14px;
+    left: 200px;
+    width: 75px;
+    height: 75px;
+    display: none;
+    background-color: rgba(54, 64, 77, 1);
+    border-radius: 70px;
+    z-index: 6;
+}
+
+
+
+/* ///   CHAT BAR   /// */
+#chat_background{
+    position: fixed;
+    width: calc(100% - 250px);
+    height: calc(100% - 105px);
+    right: 0px;
+    top: 0px;
+    overflow: auto;
+    background-color: grey;
+    z-index: 0;
+
+}
+#send_file_background{
+    position: fixed;
+    width: 750px;
+    height: 450px;
+    right: 350px;
+    top: 80px;
+    border-radius: 12px;
+    background-color: rgb(230, 224, 224);
+    display: none;
+    z-index: 4;
+}
+#file_upload_button{
+    position: absolute;
+    top: 370px;
+    left: 285px;
+    height: 62px;
+    font-size: 38px;
+    color: white;
+    border-radius: 18px;
+    background-color: rgba(54, 64, 77, 1);
+    z-index: 5;
+}
+#file_upload_label{
+    position: absolute;
+    top: 50px;
+    left: 40px;
+    color: black;
+    font-size: 42px;
+    text-align: center;
+    z-index: 5;
+}
+#file_upload_button_input{
+    position: absolute;
+    top: 100px;
+    left: 40px;
+    width: 260px;
+    height: 48px;
+    border: none;
+    color: white;
+    background-color: rgba(54, 64, 77, 1);
+    border-radius: 18px;
+    font-size: 26px;
+    text-align: center;
+    z-index: 5;
+}
+#background_for_webpage_url{
+    position: absolute;
+    top: 275px;
+    left: 285px;
+    width: 430px;
+    height: 48px;
+    border: none;
+    background-color: rgba(54, 64, 77, 1);
+    border-radius: 18px;
+    z-index: 4;
+
+}
+#webpage_url{
+    position: absolute;
+    top: 277px;
+    left: 287px;
+    width: 420px;
+    height: 42px;
+    border: none;
+    color: black;
+    background-color: white;
+    border-radius: 18px;
+    font-size: 26px;
+    text-align: center;
+    z-index: 5;
+}
+#webpage_url_label{
+    position: absolute;
+    top: 225px;
+    left: 425px;
+    color: black;
+    font-size: 42px;
+    text-align: center;
+    z-index: 5;
+
+}
+#send_file_or{
+    position: absolute;
+    top: 115px;
+    left: calc(100% - 54%);
+    color: black;
+    font-size: 42px;
+    text-align: center;
+    z-index: 5;
+}
+#log_background{
+    position: fixed;
+    width: 750px;
+    height: 450px;
+    right: 350px;
+    top: 80px;
+    border-radius: 12px;
+    background-color: rgb(230, 224, 224);
+    display: none;
+    z-index: 4;
+}
+#log_output{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 750px;
+    height: 450px;
+    border-radius: 12px;
+    background-color: rgb(230, 224, 224);
+    overflow: auto;
+    z-index: 5;
+
+}
+#dev_background{
+    position: fixed;
+    width: 750px;
+    height: 450px;
+    right: 350px;
+    top: 80px;
+    border-radius: 12px;
+    background-color: rgb(230, 224, 224);
+    display: none;
+    z-index: 4;
+}
+#chat_season{
+    position: absolute;
+    top: 0px;
+    left: calc(100% - 50%);
+    width: fit-content;
+    height: 60px;
+    border-radius: 22px;
+    background-color: rgba(54, 64, 77, 1);
+    z-index: 10;
+}
+#chat_season_name{
+    position: relative;
+    top: 5px;
+    width: 100px;
+    height: 5px;
+    color: black;
+    left: 5px;
+    font-size: 20px;
+    margin-right: 20px;
+    border-radius: 18px;
+    padding: 20px;
+}
+#chat_new_seasson{
+    position: relative;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 18px;
+    width: 40px;
+    height: 40px;
+}
+.exit-button {
+    position: absolute;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    right: 25px;
+    font-size: 20px;
+    background-color: rgb(230, 224, 224);
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 8;
+}
+.exit-button:hover {
+    background-color: rgb(230, 224, 224);;
+    color: #902323;
+}
+#dekorace_2{
+    position: relative;
+    top: 3px;
+    left: 16px;
+    z-index: 2;
+}
+
+/* ///   GENEROVANÝ   /// */
+.message_container {
+    position: fixed;
+    width: calc(100% - 250px);
+    height: calc(100% - 150px);
+    right: 0px;
+    top: 45px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.user_message{
+    position: relative;
+    width: fit-content;
+    height: auto;
+    background-color: rgba(54, 64, 77, 1);
+    color: black;
+    border-radius: 12px;
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+    text-align: right;
+}
+.user_circle{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-color: green;
+    border-radius: 80px;
+    margin-left: 20px;
+}
+/**/
+.backend_message{
+    position: relative;
+    width: fit-content;
+    height: auto;
+    background-color: rgba(54, 64, 77, 1);
+    color: black;
+    border-radius: 12px;
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+    text-align: left;
+}
+.backend_circle{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-color: Blue;
+    border-radius: 80px;
+    margin-left: 20px;
+}
+.user_message_wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    align-self: flex-end;
+}
+
+.backend_message_wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-self: flex-start;
+    box-sizing: border-box;
+}
+.file_sql_space_wraper{
+    position: relative;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    color: black;
+    border-radius: 12px;
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+    text-align: left;
+}
+.file_sql_list_space{
+    position: relative;
+    color: black;
+    border-radius: 12px;
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+    text-align: left;
+    flex-grow: 1;
+}
+.delete_file{
+    position: relative;
+    top: 2px;
+    right: -8px;
+    width: 25px;    
+    height: 25px;
+    background-color: transparent;
+}
+.delete_file:hover{
+    background-color: transparent;
+    color: #902323;
+
+}
+
+/* ///   LOGIN   /// */
+#login_div{
+    position: fixed;
+    width: 290px;
+    height: 450px;
+    left: calc(100% - 60%);
+    top: 80px;
+    border-radius: 12px;
+    background-color: rgb(230, 224, 224);
+}
+.login_inputs{
+    position: relative;
+    width: 220px;
+    height: 40px;
+    left: 10px;
+    top: 70px;
+    border: none;
+    border-radius: 8px;
+    margin: 25px;
+}
+#login_text{
+    position: absolute;
+    left: 88px;
+    top: 10px;
+    border: none;
+    font-size: 42px;
+}
+#login_button{
+    position: absolute;
+    width: 290px;
+    height: 50px;
+    left: 0px;
+    bottom: 80px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(90, 161, 255);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}

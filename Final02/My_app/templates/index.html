@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div id="side_bar">
+        <div id="dekorace">
+            <svg id="dekorace_1" width="250" height="1010" viewBox="0 0 358 1010" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 549.616C0 549.616 338.672 408.73 354.67 549.616C362.163 615.604 354.67 1010 354.67 1010H0V549.616Z" fill="#36404D"/>
+                <path d="M102 382.5C102 398.792 87.6731 412 70 412C52.3269 412 38 398.792 38 382.5C38 366.208 52.3269 353 70 353C87.6731 353 102 366.208 102 382.5Z" fill="#36404D"/>
+                <path d="M327 173.5C327 189.792 312.673 203 295 203C277.327 203 263 189.792 263 173.5C263 157.208 277.327 144 295 144C312.673 144 327 157.208 327 173.5Z" fill="#36404D"/>
+                <path d="M174 253C174 267.359 162.583 279 148.5 279C134.417 279 123 267.359 123 253C123 238.641 134.417 227 148.5 227C162.583 227 174 238.641 174 253Z" fill="#36404D"/>
+                <path d="M115 114.5C115 124.717 106.493 133 96 133C85.5066 133 77 124.717 77 114.5C77 104.283 85.5066 96 96 96C106.493 96 115 104.283 115 114.5Z" fill="#36404D"/>
+                <path d="M268 412C268 424.15 259.27 434 248.5 434C237.73 434 229 424.15 229 412C229 399.85 237.73 390 248.5 390C259.27 390 268 399.85 268 412Z" fill="#36404D"/>
+                <path d="M293 56C293 64.2843 286.284 71 278 71C269.716 71 263 64.2843 263 56C263 47.7157 269.716 41 278 41C286.284 41 293 47.7157 293 56Z" fill="#36404D"/>
+                <path d="M48 15C48 23.2843 41.2843 30 33 30C24.7157 30 18 23.2843 18 15C18 6.71573 24.7157 0 33 0C41.2843 0 48 6.71573 48 15Z" fill="#36404D"/>
+            </svg>                    
+        </div>
+        <div id="historie">
+
+        </div>
+        <div>
+            <button id="toggleButton" >RAG
+                <div id="toggleButton_indicator" class="toggle-button off"></div>
+            </button>
+        </div>
+        <div>
+            <button id="log_button" >Log
+                <ion-icon id="log_button_icon" name="albums-outline"></ion-icon>
+            </button>
+        </div>
+        <div>
+            <button id="send_file_button">Upload
+                <ion-icon id="send_file_button_icon" name="folder-open-outline"></ion-icon>
+            </button>
+        </div>
+        <div>
+            <button id="dev_chats_button">Dev
+                <ion-icon id="dev_chats_button_icon" name="code-slash-outline"></ion-icon>
+            </button>
+        </div>
+
+    </div>
+    <div id="search_bar">
+        <form method="POST" action="/get-text"> 
+            <textarea id="prompt_input" name="user_text"></textarea>
+            <div>
+                <button id="send_button" type="submit" >
+                    <ion-icon id="send_button_icon" name="paper-plane-outline"></ion-icon>
+                </button>
+            </div>    
+        </form>
+
+        <button id="buttn_mikrofon_off">
+            <div ><ion-icon id="mikrofon_off" name="mic-off-circle-outline"></ion-icon></div>
+            <div ><ion-icon id="mikrofon_on" name="mic-circle-outline"></ion-icon></div>
+        </button>
+    </div>
+    <div id="chat_bar">
+        <div id="chat_background"></div>
+        <div id="chat_season">
+            <input id="chat_season_name" placeholder="Name..."></input>
+            <button id="chat_new_seasson">+</button>
+        </div>
+
+    </div>
+    <div id="send_file_background">
+        <div id="send_file_decoration">
+            <svg id="dekorace_2" width="671" height="440" viewBox="0 0 671 440" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="182" cy="270.5" rx="30" ry="26.5" fill="#6F87A6"/>
+                <ellipse cx="424.5" cy="52.5" rx="25.5" ry="23.5" fill="#6F87A6"/>
+                <ellipse cx="152" cy="388" rx="20" ry="18" fill="#6F87A6"/>
+                <ellipse cx="25.5" cy="295.5" rx="25.5" ry="23.5" fill="#6F87A6"/>
+                <ellipse cx="638" cy="138" rx="18" ry="16" fill="#6F87A6"/>
+                <ellipse cx="524.5" cy="370" rx="13.5" ry="15" fill="#6F87A6"/>
+                <ellipse cx="25.5" cy="425" rx="13.5" ry="15" fill="#6F87A6"/>
+                <ellipse cx="504.5" cy="185.5" rx="18.5" ry="16.5" fill="#6F87A6"/>
+                <ellipse cx="549.5" cy="102.5" rx="10.5" ry="12.5" fill="#6F87A6"/>
+                <ellipse cx="121.5" cy="185.5" rx="10.5" ry="12.5" fill="#6F87A6"/>
+                <ellipse cx="511" cy="8" rx="9" ry="8" fill="#6F87A6"/>
+                <circle cx="660.5" cy="411.5" r="10.5" fill="#6F87A6"/>
+                <ellipse cx="626" cy="26.5" rx="30" ry="26.5" fill="#6F87A6"/>
+                </svg>
+        </div>
+        <button class="exit-button">&#10005;</button>
+        <form action="/upload/file" method="post" enctype="multipart/form-data">
+            <label id="file_upload_label">Upload pdf file</label>
+            <input type="file" id="file_upload" name="file_upload" accept=".pdf" style="display: none;">
+            <button id="file_upload_button_input">Nahrát soubor</button>
+        </form>
+
+        <p id="send_file_or">OR</p>
+        <button id="file_upload_button">upload</button>
+
+        <form action="/upload/webpage" method="post">
+            <label id="webpage_url_label">Upload webpage</label>
+            <input type="text" id="webpage_url" name="webpage_url" placeholder="URL">
+            <div id="background_for_webpage_url"></div>
+        </form>
+    </div>
+
+    <div id="log_background">
+        <button class="exit-button">&#10005;</button>
+        <div id="log_output"></div>
+    
+    </div>
+
+    <div id="dev_background">
+        <button class="exit-button">&#10005;</button>
+
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="../static/script.js"></script>
+</body>
+</html>

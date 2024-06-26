@@ -1,0 +1,71 @@
+networks:
+  dem:
+
+services:
+  app:
+    build: ./My_app
+    depends_on:
+      - pgadmin
+    ports:
+      - "8000:8000"
+
+    volumes:
+      - ./My_app:/app
+      
+    networks:
+      - dem
+    environment:
+      - FLASK_APP=app.py
+      - $DB_URL
+      - $SECRET_KEY
+      - $GROQ_API_KEY
+      - $DG_API_KEY
+      - $Form_key
+
+    env_file:
+      - .env
+    develop:
+      watch:
+        - path: ./My_app/requirements.txt
+          action: rebuild
+        - path: ./My_app
+          target: /app
+          action: sync
+      
+  postgres:
+    image: postgres:latest
+    restart: always
+    
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: oltp_db
+
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+    ports:
+      - "5432:5432"
+    networks:
+      - dem  
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    restart: always
+
+    depends_on:
+      - postgres
+
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+
+    networks:
+      - dem
+
+    ports:
+      - "5050:80"
+    
+
+volumes:
+  dbdata:
