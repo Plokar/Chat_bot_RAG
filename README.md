@@ -3,6 +3,15 @@ Is dynamick flask web aplication which use groq and my own build RAG module for 
 
 in the aplication is also included Text2Speach and Speach2Text bud  as of now it doesnt work proprly.
 
+# .ENV
+Should be put on the same level as compose.yaml
+
+      GROQ_API_KEY=""
+      DG_API_KEY=""
+      Form_key="your-secret-key"
+      DB_URL="postgresql://postgres:postgres@postgres:5432/oltp_db"
+      SECRET_KEY="5e9f4d3e7c2b1a8f6b4e3d1c9a7f5e2b"
+
 # WHOLE APP IS IN DOCKER! 
 Firstly you need to download docker desktop for using this app
 
